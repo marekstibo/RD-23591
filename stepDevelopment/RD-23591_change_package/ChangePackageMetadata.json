@@ -1,9 +1,9 @@
 {
   "version" : "2",
   "id" : "RD-23591_change_package",
-  "name" : null,
+  "name" : "RD-23591_change_package",
   "metadata" : { },
-  "setupGroupId" : null,
+  "setupGroupId" : "ChangePackages",
   "uniqueId" : "cpk-27cc97c2-96bb-4f9c-b0e2-572d1fda3b03",
   "origin" : "stepDevelopment",
   "wasSigned" : "true",

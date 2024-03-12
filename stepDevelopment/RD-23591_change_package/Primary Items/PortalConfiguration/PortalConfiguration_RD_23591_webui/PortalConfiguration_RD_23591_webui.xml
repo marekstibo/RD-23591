@@ -1,138 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-< xmlns="http://stibosystems.com/step/portal-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" portalId="customerportal" xsi:schemaLocation="http://stibosystems.com/step/portal-config portal-config.xsd">
+<portal-config portalId="customerportal" schemaLocation="http://stibosystems.com/step/portal-config portal-config.xsd">
     
-    <>
+    <screens>
 
-        <>
-            < id="PortalTitle" value="STEP Web UI"/>
-        </>
+        <loginscreen>
+            <parameter id="PortalTitle" value="STEP Web UI"/>
+        </loginscreen>
 
-        < id="main" type="Main">
-            < id="Resizeable" value="true"/>
-            < id="DefaultSidePanel" value="SHOWN"/>
-            < id="Left">
-                < id="Left" type="PrimaryNavigation">
-                    < id="MenuItems">
-                        < id="MenuItems" type="GlobalNavigationSearch">
-                            < id="Label" value="Global Search"/>
-                            < id="SearchConfigurations">
-                                < id="SearchConfigurations" type="GlobalNavigationSearchConfiguration">
-                                    < id="Title" value="Name/Id/Attributes"/>
-                                    < id="SearchPlugins">
-                                        < id="SearchPlugins" type="NameOrIdOrAttributes">
-                                            < id="ForceIDNameSearch" value="false"/>
-                                            < id="SearchInDataContainers" value="false"/>
-                                        </>
-                                    </>
-                                </>
-                            </>
-                        </>
-						< id="MenuItems" type="TreeItem">
-						  < id="Label" value="i18n.stibo.webui.primarynavigation.TreeItem.Label"/>
-						  < id="showRecycle" value="false"/>
-						  < id="Icon" value="account_tree"/>
-						  < id="ShowLeaves" value="false"/>
-						  < id="HideLeaves" value="false"/>
-						</>
-
-                    </>
-                </>
-            </>
-            < id="Mappings">
-                < id="Mappings" type="ScreenMapping">
-                    < id="Screen" value="userdetails"/>
-                    < id="Conditions">
-                        < id="Conditions" type="UserCondition"/>
-                    </>
-                </>
-                < id="Mappings" type="ScreenMapping">
-                    < id="Screen" value="Name and ID"/>
-                    < id="Conditions">
-                        < id="Conditions" type="AlwaysTrueCondition"/>
-                    </>
-                </>
-            </>
-        </>
+        
 
 
-        < id="homepage" type="HomePage">
-            < id="DisableTitle" value="false"/>
-            < id="PagingEnabled" value="false"/>
-            < id="Title" value="Welcome to the STEP Web UI"/>
-            < id="CssClass" value="stibo-HomePage"/>
-            < id="Content">
-                < id="Content" type="WidgetGrid">
-                    < id="Widgets">
-                        < id="Widgets" type="TextWidget">
-                            < id="DoubleWidth" value="false"/>
-                            < id="Title" value="Welcome"/>
-                            < id="Text" value="Click the gear icon in the corner bar to begin configuring the Web UI. For help and guidance on configuring Web UIs, see the Web User Interfaces section of the online help."/>
-                            < id="CssClass" value="stb-staticText"/>
-                        </>
-                        < id="Widgets" type="UserWidget">
-                            < id="UserDetailsScreen" value="userdetails"/>
-                            < id="Title" value="i18n.stibo.UserWidgetServerComponent.Title"/>
-                        </>
-                    </>
-                </>
-            </>
-        </>
+        
 
 
-        < id="userdetails" type="UserDetails">
-            < id="Main" type="NodeEditor">
-                < id="Rows">
-                    < id="UserId" type="IdValue">
-                        < id="Label" value="User ID"/>
-                    </>
-                    < id="UserEmail" type="UserEmail">
-                        < id="Label" value="Email Address"/>
-                        < id="Mandatory" value="True"/>
-                    </>
-                    < id="UserPassword" type="UserPassword">
-                        < id="OldPasswordLabel" value="Old password"/>
-                        < id="NewPasswordLabel" value="New password"/>
-                        < id="RepeatPasswordLabel" value="Repeat new password"/>
-                    </>
-                </>
-            </>
+        
 
-            < id="Buttons" type="Buttons">
-                < id="Actions">
-                    < type="SaveAction">
-                        < id="CssClass" value="SaveButton"/>
-                    </>
-                    < type="ResetAction">
-                        < id="CssClass" value="ResetButton"/>
-                    </>
-                </>
-            </>
-        </>
+        
+        
+    </screens>
 
-        < id="login" type="LoginScreen">
-        </>
-        < id="Name and ID" type="NodeDetails">
-            < id="Title" value="Name and ID"/>
-            < id="EnforceValidity" value="false"/>
-            < id="ShowWarning" value="false"/>
-            < id="Main" type="NodeEditor">
-                < id="LabelLayout" value="LEFT"/>
-                < id="Rows">
-                    < id="Rows" type="IdValue">
-                        < id="Label" value="i18n.stibo.IdValue.Label"/>
-                        < id="CssClass" value="stibo-IdValue"/>
-                    </>
-                    < id="Rows" type="NameValue">
-                        < id="ReadOnly" value="false"/>
-                        < id="Label" value="i18n.stibo.NameValue.Label"/>
-                        < id="CssClass" value="stibo-NameValue"/>
-                        < id="Mandatory" value="false"/>
-                    </>
-                </>
-            </>
-        </>
-    </>
-
-    <>
-    </>
-</>
+    <theme>
+    </theme>
+</portal-config>

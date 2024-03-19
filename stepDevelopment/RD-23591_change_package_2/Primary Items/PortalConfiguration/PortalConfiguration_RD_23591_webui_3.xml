@@ -1,4 +1,4 @@
-<STEP-ProductInformation ContextID="" UseContextLocale="false" WorkspaceID="Main">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><STEP-ProductInformation ContextID="" UseContextLocale="false" WorkspaceID="Main">
     <PortalConfigurations>
         <PortalConfiguration ID="RD_23591_webui_3"><!-- Definition:
 <portal-config portalId="customerportal" xmlns="http://stibosystems.com/step/portal-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -127,7 +127,7 @@
 </portal-config> -->
             <SetupGroupLink SetupGroupID="WebUIs"/>
             <Name QualifierID="Qualifier root">RD_23591_webui_3</Name>
-            <Configuration/>
+            
         </PortalConfiguration>
     </PortalConfigurations>
 </STEP-ProductInformation>

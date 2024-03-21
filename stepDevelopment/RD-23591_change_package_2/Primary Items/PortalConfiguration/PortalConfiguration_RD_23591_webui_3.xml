@@ -2,8 +2,8 @@
     <PortalConfigurations>
         <PortalConfiguration ID="RD_23591_webui_3">
             <SetupGroupLink SetupGroupID="WebUIs"/>
-            <Name QualifierID="Qualifier root">RD_23591_webui_3</Name>
-            <Configuration<!-- The content is decoded and moved to the subfolder -->/>
+            <!-- The content is decoded and moved to the subfolder --><Name QualifierID="Qualifier root">RD_23591_webui_3</Name>
+            <!-- The content is decoded and moved to the subfolder --><Configuration/>
         </PortalConfiguration>
-    </PortalConfigurations>
-</STEP-ProductInformation>
+    <!-- The content is decoded and moved to the subfolder --></PortalConfigurations>
+<!-- The content is decoded and moved to the subfolder --></STEP-ProductInformation>

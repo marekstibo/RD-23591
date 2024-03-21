@@ -5,7 +5,7 @@
             <SetupGroupLink SetupGroupID="WebUIs"/>
             <Name QualifierID="Qualifier root">RD_23591_webui_3</Name>
             <!-- The 'Configuration' content is decoded and moved to the subfolder -->
-<Configuration/>
+            <Configuration/>
         </PortalConfiguration>
     </PortalConfigurations>
 </STEP-ProductInformation>

@@ -1,0 +1,9 @@
+<STEP-ProductInformation ContextID="" WorkspaceID="Main" UseContextLocale="false">
+    <PortalConfigurations>
+        <PortalConfiguration ID="RD_23591_webui_3">
+            <SetupGroupLink SetupGroupID="WebUIs"/>
+            <Name QualifierID="Qualifier root">RD_23591_webui_3</Name>
+            <Configuration<!-- The content is decoded and moved to the subfolder -->/>
+        </PortalConfiguration>
+    </PortalConfigurations>
+</STEP-ProductInformation>

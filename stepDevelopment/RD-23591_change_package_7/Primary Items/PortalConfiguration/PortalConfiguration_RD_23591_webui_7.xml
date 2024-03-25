@@ -1,11 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <STEP-ProductInformation ContextID="" WorkspaceID="Main" UseContextLocale="false">
     <PortalConfigurations>
-        <PortalConfiguration ID="RD_23591_webui_7">
-            <SetupGroupLink SetupGroupID="WebUIs"/>
+        <PortalConfiguration ID="RD_23591_webui_7"><!-- Definition:
+<portal-config portalId="customerportal" xmlns="http://stibosystems.com/step/portal-config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <screens>
+    <loginscreen>
+      <parameter id="PortalTitle" value="STEP Web UI"/>
+    </loginscreen>
+    <screen id="Name and ID" type="NodeDetails">
+      <component id="Main" type="NodeEditor">
+        <parameter id="LabelLayout" value="LEFT"/>
+        <parameter-list id="Rows">
+          <component id="Rows" type="IdValue">
+            <parameter id="CssClass" value="stibo-IdValue"/>
+            <parameter id="Label" value="i18n.stibo.IdValue.Label"/>
+          </component>
+          <component id="Rows" type="NameValue">
+            <parameter id="CssClass" value="stibo-NameValue"/>
+            <parameter id="Label" value="i18n.stibo.NameValue.Label"/>
+            <parameter id="Mandatory" value="false"/>
+            <parameter id="ReadOnly" value="false"/>
+          </component>
+        </parameter-list>
+      </component>
+      <parameter id="EnforceValidity" value="false"/>
+      <parameter id="ShowWarning" value="false"/>
+      <parameter id="Title" value="Name and ID"/>
+    </screen>
+    <screen id="homepage" type="HomePage">
+      <parameter id="CssClass" value="stibo-HomePage"/>
+      <parameter id="DisableTitle" value="false"/>
+      <parameter id="PagingEnabled" value="false"/>
+      <parameter id="Title" value="Welcome to the STEP Web UI"/>
+      <parameter-list id="Content">
+        <component id="Content" type="WidgetGrid">
+          <parameter-list id="Widgets">
+            <component id="Widgets" type="TextWidget">
+              <parameter id="CssClass" value="stb-staticText"/>
+              <parameter id="DoubleWidth" value="false"/>
+              <parameter id="Text" value="Click the gear icon in the corner bar to begin configuring the Web UI. For help and guidance on configuring Web UIs, see the Web User Interfaces section of the online help."/>
+              <parameter id="Title" value="Welcome"/>
+            </component>
+            <component id="Widgets" type="UserWidget">
+              <parameter id="Title" value="i18n.stibo.UserWidgetServerComponent.Title"/>
+              <parameter id="UserDetailsScreen" value="userdetails"/>
+            </component>
+          </parameter-list>
+        </component>
+      </parameter-list>
+    </screen>
+    <screen id="login" type="LoginScreen"/>
+    <screen id="main" type="Main">
+      <parameter id="DefaultSidePanel" value="SHOWN"/>
+      <parameter id="Resizeable" value="true"/>
+      <parameter-list id="Left">
+        <component id="Left" type="PrimaryNavigation">
+          <parameter-list id="MenuItems">
+            <component id="MenuItems" type="GlobalNavigationSearch">
+              <parameter id="Label" value="Global Search"/>
+              <parameter-list id="SearchConfigurations">
+                <component id="SearchConfigurations" type="GlobalNavigationSearchConfiguration">
+                  <parameter id="Title" value="Name/Id/Attributes"/>
+                  <parameter-list id="SearchPlugins">
+                    <component id="SearchPlugins" type="NameOrIdOrAttributes">
+                      <parameter id="ForceIDNameSearch" value="false"/>
+                      <parameter id="SearchInDataContainers" value="false"/>
+                    </component>
+                  </parameter-list>
+                </component>
+              </parameter-list>
+            </component>
+            <component id="MenuItems" type="TreeItem">
+              <parameter id="HideLeaves" value="false"/>
+              <parameter id="Icon" value="account_tree"/>
+              <parameter id="Label" value="i18n.stibo.webui.primarynavigation.TreeItem.Label"/>
+              <parameter id="ShowLeaves" value="false"/>
+              <parameter id="showRecycle" value="false"/>
+            </component>
+          </parameter-list>
+        </component>
+      </parameter-list>
+      <parameter-list id="Mappings">
+        <component id="Mappings" type="ScreenMapping">
+          <parameter id="Screen" value="userdetails"/>
+          <parameter-list id="Conditions">
+            <component id="Conditions" type="UserCondition"/>
+          </parameter-list>
+        </component>
+        <component id="Mappings" type="ScreenMapping">
+          <parameter id="Screen" value="Name and ID"/>
+          <parameter-list id="Conditions">
+            <component id="Conditions" type="AlwaysTrueCondition"/>
+          </parameter-list>
+        </component>
+      </parameter-list>
+    </screen>
+    <screen id="userdetails" type="UserDetails">
+      <component id="Buttons" type="Buttons">
+        <parameter-list id="Actions">
+          <component type="SaveAction">
+            <parameter id="CssClass" value="SaveButton"/>
+          </component>
+          <component type="ResetAction">
+            <parameter id="CssClass" value="ResetButton"/>
+          </component>
+        </parameter-list>
+      </component>
+      <component id="Main" type="NodeEditor">
+        <parameter-list id="Rows">
+          <component id="UserId" type="IdValue">
+            <parameter id="Label" value="User ID"/>
+          </component>
+          <component id="UserEmail" type="UserEmail">
+            <parameter id="Label" value="Email Address"/>
+            <parameter id="Mandatory" value="True"/>
+          </component>
+          <component id="UserPassword" type="UserPassword">
+            <parameter id="NewPasswordLabel" value="New password"/>
+            <parameter id="OldPasswordLabel" value="Old password"/>
+            <parameter id="RepeatPasswordLabel" value="Repeat new password"/>
+          </component>
+        </parameter-list>
+      </component>
+    </screen>
+  </screens>
+  <theme/>
+</portal-config> -->
+            <SetupGroupLink SetupGroupID="WebUIs"></SetupGroupLink>
             <Name QualifierID="Qualifier root">RD_23591_webui_7</Name>
-            <!-- The 'Configuration' content is decoded and moved to the subfolder -->
-            <Configuration/>
+            <Configuration>H4sIAAAAAAAAAMVZS3PbNhA+N78C5aWXikzaS8YjO+P6EWtGtjWSUvfWgciVhCkEsABoWfn1XYBvhaQoy0l1yIQgvm+f2F3QcbLgTK8hOh9+etlw8gxKMynOvQ/+e4+ACGXExOrc+zK/HXz0iDZURJRLAeeekN6ni2EslaF8EEqxZCuCFEKfe2tj4rMg0IYtpN5pAxvth3KDCxAHNYSXQs5eNCtg2+3W3/7uS7UKfnv//kPw1/14Fq5hQwdMWAVC8EhKMorOvTDRRm5ApSvIp9mZdtvHMqTGGdNfH1J78l905F28I/gb/jwYkPmaaTJDEHmCBfkyIum2RDk5ZMk4ENzBhAERQUSoJpSgtJhTA0QqAi8UH8Ax2t8S13IO9DPuXiac7/BfEVpKynNJNKKxQUojiVkj11aA+kUXRAr+TZiCDQijfTIYZErrUAEIffGu2DjkcoVudOsXxap7E1NFN2BAEYZ+nThHzJnh6O5nyhMM+Wx+M8kU8oISPQxqpOV6uuLoNpQJj5hdjDT39v+dwqeg2Vegi4psoxKoCm1AXcOSJtzMWAQTKoCXet89Pj20gwd4BIxjGMPS7GnmtmKyxJj0orIrs2Wi2Iaq3QN9ZiuXBQ3wNmn3IJKRTcYWTIPoEpLJ/8zlgvJS/AyoCtcdhA1+G9NFxVkpI8mIgr5MpVkp8qp6NLosbLG0kaXT6NreHgIbPFFP9wd8E4yi4NIYxRaJAX3IHYfdMuGJPSo91Wv1S06TOcRq+qhG0aOq6NpfRIMnbqUKYXRtibNMyL2ypFx/cxKPZE8pR+KaGophM1gQsPG8XsQwKJzUM0BBPUI90rOviP7UNcqf3O/QcZ9jQbULXg44cJjZh4/Cd33P38IiYX6c1itRnB0/p/RTZNDKrNdyO4VwF1aOSBGpFswIu1uxmYahTIT526DEDswM5YyBPkNDQrRA7rDkd0Nqvm6u0Afj1poC3dDG0k/jGBt+0yHdT4F8Z5YBM9dTs9WDzSZ1qIMUnkk0qAjwzPHWetakMp7TiB0q5nvKVzCZ+l9QeLHaKv71ofghHrRVkeAkTEbXP96Dl3xLd3qO49D39GM7dBgUg17jpLfGaTymK8j1vcPniX3unt2YtuNevQE39oH9OZViI1zdCIuOjkLWZT0BR1dAPmC3jLoNNFdaX3Gqy8rjyu2gMLvH2GlbIEbgcDHIN2aufWLRCsxnxaIjps4UdEQK5oC8BcGLSZeOmzKvJd41AZHmyFmiT9iO5UAbCoorzsJ/XNBXOJYQhi0Lr3BuIZQKBxOywGXMiwVgqtXua3ZPmiQ+wYmJrIHHrjCsEhbZmyqRdUC6Wf9KNECJxppIRhhZtaQhaHznLn9ELtO7nuA4Hjlu/0g7G3JzMcA7tGGhc0EHW695pztTrF2vyRSLu04b1PGtqy3itaypjEWlkjNQz7Y5ZRb5KeQUF/0v9bfqo0ogMofuV+H9Vlne0h9kBDfYX6RqqksNhWUqt21VZU+M1WcU5YJG0Z82Kl0FqWvETU9PeyM+GKRvdbvZoKuqzksXXqmgA5PLKFKgO9N2j+XefmtD9+8KpnnDN5BT7JxgadhKFVVNLdZ66/nIoxxUNxxfkDin62/3A2yb+fDFa/imEAM1zZTpOyJ6MHePnN03gNbLx15Q/kiMqYx6+WO/83cZds2WFUnZGIzXpRTSP9Tf9BNLkmr5FnmZKjYFDeZkzRzLCaodEdFysfMTqPtImod2bB+y7tbE0ERQvXZUinRLZT/0ZavlArOHuxFL+yUIKzTDXrA7asC2F/knqoS9ZnXjTu5CZdkd051MyuFufHM7b4r/aQ3M7Xyb9lUZRTKm8kNMT8KWG0iu2Bs1jKrNNn+OtHoKNHoU/EAGvcZthTJv5bjSulOadad936/0VJ/yP/wM8Rqxgfxd9jCs/+XrYqhjzszFfzSLVBYSHAAA</Configuration>
         </PortalConfiguration>
     </PortalConfigurations>
 </STEP-ProductInformation>
